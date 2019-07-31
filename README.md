@@ -50,8 +50,8 @@ The two main components of Amazon Cognito are `User Pools` and `Identity Pools`.
 In order to authorioze users you need to have a directory of valid ones to compare those requests against. Cognito has the following options:
 
 * It has a built-in user directory so you can simply store and manage your user details, including passwords, right in the Cognito User Pool. This is the default.
-* It allows the optional use of external 'social' identity providers (IdPs) via OAUTH v2 such as Facebook, Google and Amazon. In this case Cognito delegates authentication to/via these providers.
-* It allows the optional use of SAML federation to identity providers (IdPs) such as a Microsoft Active Directory or Azure AD. In this case it delegates authentication to/via these providers.
+* It allows the optional use of external 'social' identity providers (IdPs) via OAUTH v2 such as Facebook, Google and Amazon. In this case Cognito delegates authentication of particular user(s) to these provider(s).
+* It allows the optional use of SAML federation to identity providers (IdPs) such as a Microsoft Active Directory or Azure AD. In this case it delegates authentication of particular user(s) to these provider(s).
 
 You can even leverage any/all of three options together to give your users options as to whether to use their social identities, their corporate identities or create a new application-specific one if you choose.
 
