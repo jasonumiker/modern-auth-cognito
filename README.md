@@ -63,4 +63,12 @@ The User Pools solves the "how to add a login/password to my app as-a-service" q
 
 An Identity Pool doesn't have its own user directory or do its own authentication - is uses either a User Pool or any OAUTH v2 or SAML v2 identity provider (IdP). It is for authorization and exchanging an identity for a temporary AWS credential to use other AWS services/APIs.
 
-## Walkthrough of example web application secured by Cognito
+## Walkthroughs of example web application secured by Cognito
+
+There is a great example on AWS' github of the different ways you can use Cognito which we'll go through first - https://github.com/aws-samples/aws-cognito-apigw-angular-auth
+![Cognito API Gateway Example](/cognito-apigw-example.png)
+NOTE: This example currently is specifying a version of the Node.js Lambda runtime that has been deprecated - but if you bump it to nodejs8.10 then it will work. There is a pull request pending against the project to do that as well.
+
+This example covers most of our exploration here - but it depends on API Gateway to validate/authorize your tokens or AWS role before passing the request on to your application. There are situations where you'll want to decode and authorize a JWT access token yourself - so we'll go through an example of how to do that too based on this example code from AWS' GitHub.
+
+https://github.com/awslabs/aws-support-tools/tree/master/Cognito/decode-verify-jwt
