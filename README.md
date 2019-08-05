@@ -1,6 +1,6 @@
 # Introduction to modern authentication patterns for application developers
 
-By Jason Umiker (jumiker@amazon.com)
+By Jason Umiker
 
 ## Background and History (OAUTH v2)
 
